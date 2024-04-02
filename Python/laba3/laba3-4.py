@@ -1,5 +1,5 @@
 
-def repetitionss(strings_list):
+def repetitions(strings_list):
     reps = []
     s = []
     for string in strings_list:
@@ -12,6 +12,6 @@ def repetitionss(strings_list):
 
 
 a = ['abc', 'bcd', 'abc', 'abd', 'abd', 'dcd', 'abc']
-result = repetitionss(a)
+result = repetitions(a)
 
 print(result)  
