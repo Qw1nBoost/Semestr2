@@ -1,8 +1,6 @@
 alph = "qwertyuiopasdfghjklzxcvbnm"
 
-print("Введите строку по типу g3H2Op3J4Y: ")
-
-s = input()
+s = input("Введите строку по типу g3H2Op3J4Y: ")
 new_s = ''
 
 
