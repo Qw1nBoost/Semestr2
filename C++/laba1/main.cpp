@@ -1,5 +1,7 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "func.h"
+
+
 using namespace std;
 
 int main()
@@ -7,11 +9,9 @@ int main()
     setlocale(LC_ALL, "rus");
 
     std::string filename = "input.txt";
+    al::writeTimeToFile(filename);
 
-    la::increaseAndWriteRunNumber(filename);
-    la::writeCurrentTime(filename);
-
-    std::cout << "Èíôîðìàöèÿ çàïèñàíà â ôàéë " << filename << std::endl;
+    std::cout << "Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð° Ð² Ñ„Ð°Ð¹Ð» " << filename << std::endl;
 
     return 0;
 }

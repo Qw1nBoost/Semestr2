@@ -1,39 +1,17 @@
 #include "func.h"
 #include <ctime>
+#include <chrono>
 #include <fstream>
-using namespace std;
 
-namespace la {
-    void increaseAndWriteRunNumber(const string& filename) {
-        ifstream infile(filename);
-        int currentRunNumber = 0;
+namespace al {
+    void writeTimeToFile(const std::string& filename) {
+        std::ofstream file(filename, std::ios_base::app);
 
-        if (infile) {
-            infile >> currentRunNumber;
+        if (file.is_open()) {
+            auto now = std::chrono::system_clock::now();
+            std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+            file << std::ctime(&now_c);
+            file.close();
         }
-
-        infile.close();
-
-        currentRunNumber++;
-
-        ofstream outfile(filename);
-        outfile << currentRunNumber << "-";
-        outfile.close();
-
-    }
-
-    void writeCurrentTime(const string& filename) {
-        time_t now = time(0);
-        tm* timeinfo = localtime(&now);
-
-        ofstream outfile(filename, ios_base::app);  
-    
-        outfile << 1900 + timeinfo->tm_year << "-"
-            << 1 + timeinfo->tm_mon << "-"
-            << timeinfo->tm_mday << "-"
-            << timeinfo->tm_hour << "-"
-            << timeinfo->tm_min << "-"
-            << timeinfo->tm_sec;
-        outfile.close();
     }
 }
