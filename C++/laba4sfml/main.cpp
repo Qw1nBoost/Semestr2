@@ -5,7 +5,7 @@ int main()
 {
     const int N = 5;
 
-    sf::RenderWindow window(sf::VideoMode(1000, 900), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(1000, 900), "SFML figures");
     sf::CircleShape circles[N];
     sf::RectangleShape rectangles[N];
     sf::RectangleShape lines[N];
