@@ -8,9 +8,9 @@ namespace al {
         std::ofstream file(filename, std::ios_base::app);
 
         if (file.is_open()) {
-            auto now = std::chrono::system_clock::now(); //получаем текущее время
-            std::time_t now_c = std::chrono::system_clock::to_time_t(now); //преобразуем время в тип std::time_t(кол-во секунд с начала эпохи)
-            file << std::ctime(&now_c); //вывод времени в файл
+            auto now = std::chrono::system_clock::now(); //РїРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰РµРµ РІСЂРµРјСЏ
+            std::time_t now_c = std::chrono::system_clock::to_time_t(now); //РїСЂРµРѕР±СЂР°Р·СѓРµРј РІСЂРµРјСЏ РІ С‚РёРї std::time_t(РєРѕР»-РІРѕ СЃРµРєСѓРЅРґ СЃ РЅР°С‡Р°Р»Р° СЌРїРѕС…Рё)
+            file << std::ctime(&now_c); //РІС‹РІРѕРґ РІСЂРµРјРµРЅРё РІ С„Р°Р№Р»
             file.close();
         }
     }
