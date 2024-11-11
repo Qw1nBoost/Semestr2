@@ -13,7 +13,7 @@ function isBalanced(str) {
         }
     }
   
-    return !stack.length;
+    return !stack.length; //скобки соответсвуют друг другу, если длина массива равна 0
 }
 
 console.log(isBalanced('()[({}())]'));
