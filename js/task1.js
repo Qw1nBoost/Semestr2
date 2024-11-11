@@ -7,7 +7,7 @@ function isBalanced(str) {
         if (openBraces.includes(el)) {
             stack.push(el);
         } else if (closeBraces.includes(el)) {
-            if (!stack.length || openBraces.indexOf(stack.pop()) !== closeBraces.indexOf(el)) {
+            if (!stack.length || openBraces.indexOf(stack.pop()) !== closeBraces.indexOf(el)) { // Несоответствие открывающей и закрывающей скобки
                 return false;
             }
         }
